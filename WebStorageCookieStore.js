@@ -24,7 +24,7 @@ class WebStorageCookieStore extends ToughCookie.Store {
     callback(null, Cookie.fromJSON(cookie));
   }
 
-  findCookies(domain, path, callback) {
+  findCookies(domain, path, allowSpecialUseDomain, callback) {
     if (!domain) {
       callback(null, []);
       return;
